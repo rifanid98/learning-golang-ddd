@@ -1,0 +1,31 @@
+GET http://localhost:8080/users
+###
+POST http://localhost:8080/users
+Content-Type: application/json
+
+{
+  "first_name": "Adnin",
+  "last_name": "Rifandi",
+  "email": "adninsijawa.office@gmail.com",
+  "password": "password"
+}
+###
+POST http://localhost:8080/auth/login
+Content-Type: application/json
+
+{
+  "email": "adninsijawa.office@gmail.com",
+  "password": "password"
+}
+###
+POST http://localhost:8080/auth/logout
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3NfdXVpZCI6IjY1Mzc1YzIyLWNjY2MtNDljZC04N2UwLTM2NWQwMDEzM2Q2OSIsImF1dGhvcml6ZWQiOnRydWUsImV4cCI6MTYyNzE4NjMyMywidXNlcl9pZCI6M30.8BRAzNadfmX811heLVeq5Agi3rAZODoabvRVPvvhl7g
+###
+POST http://localhost:8080/auth/refresh
+Content-Type: application/json
+
+{
+  "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Mjc3OTAyMjMsInJlZnJlc2hfdXVpZCI6IjY1Mzc1YzIyLWNjY2MtNDljZC04N2UwLTM2NWQwMDEzM2Q2OSsrMyIsInVzZXJfaWQiOjN9.Oias7Lzb_TvtDohwcQBjz2ElLL93h1k9SU1a2XuJRK8"
+}
+###
